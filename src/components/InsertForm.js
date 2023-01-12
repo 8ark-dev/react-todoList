@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function InsertForm({onInsert}) {
+function InsertForm({onInsert, disabled}) {
   const [inputValue,setInputValue] = useState("");
   return (
     <form onSubmit={
@@ -27,7 +27,7 @@ function InsertForm({onInsert}) {
             color : '#000',
             padding : '6px 12px',
             backgroundColor : 'transparent',
-        }}/>
+        }} disabled={disabled}/>
         <button  style={{
             border : 'none',
             borderRadius : 16,
