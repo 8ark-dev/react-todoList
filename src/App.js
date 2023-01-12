@@ -1,11 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import './App.css';
+import InsertForm from "./components/InsertForm";
 
 function App() {
   
   return (
     <>
-      <div>hi</div>
+      <InsertForm onInsert={
+        (value) => {
+          console.log(value);
+        }
+      }/>
     </>
   );
 }
