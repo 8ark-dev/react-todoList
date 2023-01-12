@@ -5,9 +5,6 @@ Made todoList app using React.js
 
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
 
 ### `npm start`
 
