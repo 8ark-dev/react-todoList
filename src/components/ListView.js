@@ -1,15 +1,19 @@
 import React from 'react';
 
-function ListView({todoList}) { // todolist라는 함수 
+function ListView({todoList, onComplete, onRemove}) { // 함수들
   return (
     <div>
         <ol>
             {
-                todoList.map((item)=> {
+                todoList.map((item, index)=> {
                     return <li key={item.key}>
                         <span>{item.value}</span>
-                        <button type='button'>완료</button>
-                        <button type='button'>삭제</button>
+                        <button type='button' onClick={() => {
+                            if(typeof onComplete === "function") onComplete(index);
+                        }}>완료</button>
+                        <button type='button' onClick={() => {
+                            if(typeof onRemove === "function") onRemove(index);
+                        }}>삭제</button>
                     </li>
                 })
             }
